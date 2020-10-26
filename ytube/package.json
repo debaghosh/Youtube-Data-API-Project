@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "tailwindcss": "^1.9.5"
+    "bootstrap-icons": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {

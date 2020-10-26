@@ -1,11 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 import requests, isodate
 from django.conf import settings
 
 def home(request):
+    if(request.method=='POST'):
+        if(request.POST['searchOption']=='1'):
+            return video(request)
+        else: #if(request.POST['searchOption'=='2']):
+            return channel(request)
+    else:
+        return render(request,'mainapp/home.html')
+
+
+def video(request):
     videos=[]
 
-    
     if(request.method == 'POST'):
         search_url='https://www.googleapis.com/youtube/v3/search'
         video_url ='https://www.googleapis.com/youtube/v3/videos'
@@ -26,7 +35,7 @@ def home(request):
             videos.append(result['id']['videoId'])
 
         params2={
-            'part':'snippet, contentDetails',
+            'part':'snippet, contentDetails, statistics',
             'key': settings.YOUTUBE_DATA_API_KEY,
             'id': ','.join(videos)
         }
@@ -35,13 +44,18 @@ def home(request):
 
         results = r.json()['items']
         videos = []
+        statistics = []
         for result in results:
             video_data = {
                 'title':result['snippet']['title'],
                 'id': result['id'],
                 'duration': isodate.parse_duration(result['contentDetails']['duration']),
-                'thumbnail':result['snippet']['thumbnails']['high']['url']
-            }
+                'thumbnail':result['snippet']['thumbnails']['high']['url'],
+                'likes':result['statistics']['likeCount'],
+                'dislikes':result['statistics']['dislikeCount'],
+                'views':result['statistics']['viewCount']
+
+                }
             videos.append(video_data)
 
     
@@ -49,14 +63,10 @@ def home(request):
         'videos': videos
     }
     
-    return render(request, 'mainapp/home.html',context)
-
-
-    
-
+    return render(request, 'mainapp/video.html',context)
 
 def channel(request):
-
+    
     channel_data={}
       
     if(request.method=='POST'):
@@ -66,7 +76,7 @@ def channel(request):
         #Search for the channel id
         param = {
             'part':'snippet',
-            'q': request.POST['channel'],
+            'q': request.POST['search'],
             'type':'channel',
             'maxResults':1,
             'key': settings.YOUTUBE_DATA_API_KEY
@@ -143,5 +153,8 @@ def channel(request):
 
 
     return render(request,'mainapp/channel.html',context)
+
+
+
 
 
