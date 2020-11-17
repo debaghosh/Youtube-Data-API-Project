@@ -31,4 +31,4 @@ More functionalities coming soon!😃
 🔴 Playlist search results<br>
 
 ### A Few Sample Images
-<img src="HomePage.png" alt="home" align="left" width=1000px height=800px>
+<img src="HomePage.png" alt="home" align="left" width=1000px height=700px>
