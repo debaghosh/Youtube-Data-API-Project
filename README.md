@@ -30,4 +30,5 @@ More functionalities coming soon!😃
 🔴 Add extra set of tags to a video task<br>
 🔴 Playlist search results<br>
 
-### Sample Images
+### A Few Sample Images
+<img src="HomePage.png" alt="home" align="left" width=1000px height=800px>
