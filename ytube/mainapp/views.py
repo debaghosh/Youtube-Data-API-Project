@@ -2,14 +2,19 @@ from django.shortcuts import render, HttpResponse
 import requests, isodate
 from django.conf import settings
 
+
 def home(request):
     if(request.method=='POST'):
         if(request.POST['searchOption']=='1'):
-            return video(request)
+            try:
+                return video(request)
+            except:
+                pass
         else: #if(request.POST['searchOption'=='2']):
             return channel(request)
     else:
         return render(request,'mainapp/home.html')
+
 
 
 def video(request):
