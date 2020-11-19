@@ -23,7 +23,7 @@ More functionalities coming soon!😃
 ☑️ Channel search results<br>
 ☑️ ChartJs (pie chart) for showing like/dislike ratio<br>
 ☑️ Crud functionality of list<br>
-🔴 Pagination of the list<br>
+☑️ Pagination of the list<br>
 ☑️  Live search of the list<br>
 🔴 Add watching, not watching, need to watch checkbox fields<br>
 🔴 Emoji template<br>
