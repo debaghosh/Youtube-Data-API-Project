@@ -24,7 +24,7 @@ More functionalities coming soon!😃
 ☑️ ChartJs (pie chart) for showing like/dislike ratio<br>
 ☑️ Crud functionality of list<br>
 🔴 Pagination of the list<br>
-🔴 Live search of the list<br>
+☑️  Live search of the list<br>
 🔴 Add watching, not watching, need to watch checkbox fields<br>
 🔴 Emoji template<br>
 🔴 Add extra set of tags to a video task<br>
