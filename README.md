@@ -20,15 +20,14 @@ More functionalities coming soon!😃
 ### Functionalities 
 <small>(☑️:<b>done</b>, 🔴:<b>not done yet</b>)</small><br><br>
 ☑️ Video search results<br>
+☑️ Copying the video link to add to Saved<br>
 ☑️ Channel search results<br>
 ☑️ ChartJs (pie chart) for showing like/dislike ratio<br>
 ☑️ Crud functionality of list<br>
 ☑️ Pagination of the list<br>
-☑️  Live search of the list<br>
-🔴 Add watching, not watching, need to watch checkbox fields<br>
-🔴 Emoji template<br>
-🔴 Add extra set of tags to a video task<br>
+☑️ Emoji template<br>
 🔴 Playlist search results<br>
 
 ### A Few Sample Images
+<img src="HomePage.png" alt="home" align="left" width=1000px height=700px>
 <img src="HomePage.png" alt="home" align="left" width=1000px height=700px>

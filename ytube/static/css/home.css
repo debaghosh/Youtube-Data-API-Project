@@ -61,9 +61,8 @@ h4{
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12);
 
-
-
 }
+
 
 #thumbnail{
 	border-radius: 10px;
@@ -83,7 +82,8 @@ h4{
 	margin: 20px;
 }
 
-.bi-clock{
+/*Video icons*/
+.bi-clock {
 	color:yellow;
 }
 
@@ -96,6 +96,23 @@ h4{
 }
 
 .bi-hand-thumbs-down{
+	color:red;
+}
+
+/*Channel icons*/
+.bi-house-door-fill{
+	color:yellow;
+}
+
+.bi-eye-fill{
+	color:blue;
+}
+
+.bi-person-check-fill{
+	color:green;
+}
+
+.bi-camera-video{
 	color:red;
 }
 

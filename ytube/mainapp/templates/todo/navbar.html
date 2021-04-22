@@ -2,14 +2,14 @@
 
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent mb-5">
-          <a class="navbar-brand" href="#">YouLists.</a>
+          <a class="navbar-brand" href="{% url 'home' %}">YouLists.</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-link" href="{% url 'index' %}">Saved </a>
+              <a class="nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Saved </a>
             </div>
           </div>
         </nav>

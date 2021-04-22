@@ -1,10 +1,15 @@
 {% extends "mainapp/home.html" %}
 
-
-
-
 {% block content %}
 
+<!--Error handling-->
+{% if message %}
+<div class="text-center">
+    {{message}}
+</div>
+{% endif %}
+
+<!--Video data-->
 {% for video in videos %}
        <div class="container mb-5" id="video">
          <h4><b>{{video.title}}</b></h4>
@@ -44,16 +49,20 @@
 
           <div class="button-grp mt-0" >
           	
-          		<button class="btn btn-primary button">
-                <a href="https://www.youtube.com/watch?v={{video.id}}">Watch video</a></button>
+          		<button class="btn btn-light button">
+                <a href="https://www.youtube.com/watch?v={{video.id}}" style="text-decoration: none;">Watch video 📹</a></button>
           	
-          		<button class="btn btn-primary button">Add</button>
+          		<button class="btn btn-light button copy-btn" vidId="{{video.id}}">
+                Copy 
+              </button>
           	
           </div>
         </div>
+
+
+        <!--Chartjs pie-chart for every video-->
           <script>
             var ctx = document.getElementById('searchChart'+ "{{ forloop.counter0 }}").getContext('2d');
-            console.log("{{video.likes}}");
             var chart = new Chart(ctx, {
                 type: 'pie',
                 data: {
