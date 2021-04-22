@@ -124,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-YOUTUBE_DATA_API_KEY = 'AIzaSyAonNbAC0q5rHnVDTEu8KHz8XHbDjMvwZI'
+YOUTUBE_DATA_API_KEY = config('YOUTUBE_DATA_API_KEY')
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
