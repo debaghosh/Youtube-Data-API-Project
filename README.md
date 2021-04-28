@@ -29,5 +29,9 @@ More functionalities coming soon!😃
 🔴 Playlist search results<br>
 
 ### A Few Sample Images
+![screen](https://github.com/debaghosh/Youtube-Data-API-Project/blob/main/screen.gif)
+/
+/
 <img src="HomePage.png" alt="home" align="left" width=1000px height=700px>
-<img src="HomePage.png" alt="home" align="left" width=1000px height=700px>
+
+
